@@ -204,6 +204,7 @@ p:last-child { margin-bottom: 0; }
   background: transparent;
   border: none;
   outline: none;
+  mix-blend-mode: multiply;
 }
 @media (min-width: 900px) { .nav-logo-img { height: 64px; } }
 
@@ -288,21 +289,36 @@ p:last-child { margin-bottom: 0; }
 /* Desktop nav */
 @media (min-width: 900px) {
   .hamburger { display: none; }
-  .nav-inner { height: 80px; }
+  .nav-phone { display: none; }
+  .site-header {
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    height: 80px;
+  }
+  .nav-inner {
+    height: 80px;
+    padding: 0;
+    flex-shrink: 0;
+    width: auto;
+    border: none;
+  }
   .nav-menu {
     display: flex !important;
+    flex: 1;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     background: transparent;
-    padding: 0;
-    gap: 4px;
+    padding: 0 0 0 16px;
+    gap: 0;
     border-top: none;
   }
   .nav-menu a {
     min-height: 40px;
     border-bottom: none;
     font-size: 0.88rem;
-    padding: 0 14px;
+    padding: 0 12px;
     border-radius: 100px;
     color: var(--color-primary);
     font-weight: 500;
@@ -328,7 +344,7 @@ p:last-child { margin-bottom: 0; }
    ============================================ */
 .hero {
   position: relative;
-  background: linear-gradient(160deg, #1E2E26 0%, var(--color-primary) 55%, #4A7060 100%);
+  background: linear-gradient(135deg, #3B5345 0%, #2a3d32 100%);
   color: #fff;
   padding: 96px 24px 112px;
   overflow: hidden;
