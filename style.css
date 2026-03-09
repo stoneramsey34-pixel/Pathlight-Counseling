@@ -200,14 +200,14 @@ p:last-child { margin-bottom: 0; }
 
 .nav-logo { background: transparent; }
 .nav-logo-img {
-  height: 160px;
+  height: 102px;
   width: auto;
   display: block;
   background: transparent;
   border: none;
   outline: none;
 }
-@media (min-width: 900px) { .nav-logo-img { height: 200px; } }
+@media (min-width: 900px) { .nav-logo-img { height: 128px; } }
 
 .nav-phone {
   display: inline-flex;
