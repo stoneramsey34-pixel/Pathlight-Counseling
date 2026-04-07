@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://pathlightga.org/sitemap.xml
+Sitemap: https://pathlightcounseling.netlify.app/sitemap.xml

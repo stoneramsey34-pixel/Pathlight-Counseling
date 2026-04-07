@@ -82,6 +82,15 @@
     "foundingDate": "2017"
   }
   </script>
+  <!-- Google Analytics 4 — TODO: Replace G-XXXXXXXXXX with your Measurement ID -->
+  <!-- Get your ID at analytics.google.com > Admin > Data Streams > Web -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "G-XXXXXXXXXX");
+  </script>
 </head>
 <body>
 
@@ -342,7 +351,7 @@
     </section>
 
     <!-- ══════════════════════════════════════════════
-         FAQ — centered
+         FAQ — centered, 10 questions with JSON-LD
          ══════════════════════════════════════════════ -->
     <section class="section faq-section" id="faq">
       <div class="section-inner" style="text-align:center;">
@@ -355,10 +364,26 @@
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">What happens in the first consultation?</span>
+              <span class="faq-q-text">How do I know if therapy is right for me?</span>
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Just a 15-minute conversation — about what's going on and how we might be able to help. No intake form, no commitment, nothing to prepare. We'll listen and tell you honestly what kind of support we think would make sense.</div>
+            <div class="faq-answer">If something in your life isn't working — anxiety that won't quit, a sadness you can't shake, a pattern you keep repeating — those are exactly the things therapy is designed for. You don't have to be in crisis to benefit. Many people start therapy simply because they want to feel better than they do right now, and that's enough of a reason. The first step is just a conversation — low-pressure, no commitment required.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">What happens in the first session?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The first session is really just a conversation. Your therapist will ask about what brought you in, a bit about your background, and what you're hoping to change or work through. There's nothing you need to prepare. You won't be put on the spot or handed a stack of forms. The goal is simply for both of you to get a sense of each other and figure out the best path forward.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">How long does therapy take?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">It depends on what you're working on. Some people see meaningful progress in 8–12 sessions. Others work with a therapist for a year or more on deeper or more complex issues. We won't keep you in therapy longer than is helpful — and we'll check in regularly to make sure you're getting what you came for. The goal is always your growth, not a never-ending appointment schedule.</div>
           </div>
 
           <div class="faq-item">
@@ -366,15 +391,47 @@
               <span class="faq-q-text">Do you accept insurance?</span>
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">We work with many insurance plans. Call us at 470-249-4499 and we'll verify your benefits before your first appointment — so you know exactly what to expect before you commit to anything.</div>
+            <div class="faq-answer">We accept Humana, Anthem BC/BS, Blue Cross/Blue Shield, Oxford, Cigna, United Healthcare, and out-of-network plans. Call us at 470-249-4499 and we'll verify your benefits before your first appointment — so you know exactly what to expect financially before you commit to anything. We believe cost shouldn't be the reason someone doesn't get help.</div>
           </div>
 
           <div class="faq-item">
             <button class="faq-question" aria-expanded="false">
-              <span class="faq-q-text">What if I've tried treatment before and it didn't work?</span>
+              <span class="faq-q-text">What is your cancellation policy?</span>
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Most people who succeed in recovery have tried before — often several times. Previous treatment that didn't stick isn't a sign that you can't do it. We'll talk about what you've tried and what a different approach might look like for you.</div>
+            <div class="faq-answer">We ask for 24 hours' notice if you need to cancel or reschedule. Life happens, and we try to be understanding — but last-minute cancellations do impact other clients who may need that appointment time. Your therapist will walk you through the specifics during your first session so there are no surprises.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">Do you offer telehealth or online sessions?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Yes. We offer telehealth sessions for clients who can't come in person or simply prefer to meet from home. Many clients find telehealth works just as well as in-person — especially once you've already established a relationship with your therapist. Ask about availability when you schedule your first consultation.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">What areas do you serve?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Our office is located in Woodstock, GA — right in the heart of Cherokee County. We regularly see clients from Canton, Holly Springs, Kennesaw, Acworth, Marietta, and surrounding areas. Our Intensive Outpatient Programs draw families from across North Georgia, including Cobb, Forsyth, Pickens, Dawson, and North Fulton counties.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">How is Pathlight Counseling different from other practices?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">A few things set us apart. We offer the only teen Intensive Outpatient Program in Northern Georgia — built specifically for adolescents, not adapted from an adult model. Many of our clinicians are in personal recovery themselves, which means they bring lived experience alongside their credentials. We also provide fully free veteran services through grant funding. And for clients whose faith matters to them, we integrate clinical and Christian principles — if and how you want that.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span class="faq-q-text">What if I don't connect with my therapist?</span>
+              <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Therapeutic fit matters more than most people realize — and we take it seriously. If you work with a therapist and something doesn't feel right, say so. We'd much rather find you a better match within our team than have you stop coming altogether. The relationship between you and your therapist is part of what makes therapy work, and we want to get that right.</div>
           </div>
 
           <div class="faq-item">
@@ -382,12 +439,101 @@
               <span class="faq-q-text">Is everything I share confidential?</span>
               <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-answer">Yes. Everything shared in counseling is protected by strict confidentiality laws. The only exceptions are narrow legal requirements — like if someone is at immediate risk of harm. We'll explain everything clearly before your first session.</div>
+            <div class="faq-answer">Yes. Everything shared in counseling is protected by strict confidentiality laws. The only exceptions are narrow legal requirements — like if someone is at immediate risk of harm, or if there is a legal mandate. We'll explain all of this clearly before your first session so you know exactly where the lines are. Most clients find that knowing they're protected makes it much easier to open up.</div>
           </div>
 
         </div>
       </div>
     </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I know if therapy is right for me?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If something in your life isn't working — anxiety that won't quit, a sadness you can't shake, a pattern you keep repeating — those are exactly the things therapy is designed for. You don't have to be in crisis to benefit. The first step is just a conversation — low-pressure, no commitment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens in the first session?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The first session is really just a conversation. Your therapist will ask about what brought you in, a bit about your background, and what you're hoping to change or work through. There's nothing you need to prepare. The goal is simply for both of you to get a sense of each other and figure out the best path forward."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does therapy take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "It depends on what you're working on. Some people see meaningful progress in 8–12 sessions. Others work with a therapist for a year or more on deeper or more complex issues. We'll check in regularly to make sure you're getting what you came for."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you accept insurance?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We accept Humana, Anthem BC/BS, Blue Cross/Blue Shield, Oxford, Cigna, United Healthcare, and out-of-network plans. Call us at 470-249-4499 and we'll verify your benefits before your first appointment so you know exactly what to expect financially."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is your cancellation policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We ask for 24 hours' notice if you need to cancel or reschedule. Your therapist will walk you through the specifics during your first session so there are no surprises."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer telehealth or online sessions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. We offer telehealth sessions for clients who can't come in person or simply prefer to meet from home. Ask about availability when you schedule your first consultation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas do you serve?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our office is located in Woodstock, GA in Cherokee County. We regularly see clients from Canton, Holly Springs, Kennesaw, Acworth, Marietta, and surrounding areas, including Cobb, Forsyth, Pickens, Dawson, and North Fulton counties."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is Pathlight Counseling different from other practices?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer the only teen Intensive Outpatient Program in Northern Georgia. Many of our clinicians are in personal recovery themselves. We provide fully free veteran services through grant funding. And for clients whose faith matters to them, we integrate clinical and Christian principles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I don't connect with my therapist?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you work with a therapist and something doesn't feel right, say so. We'd much rather find you a better match within our team than have you stop coming altogether. The relationship between you and your therapist is part of what makes therapy work."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is everything I share confidential?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Everything shared in counseling is protected by strict confidentiality laws. The only exceptions are narrow legal requirements — like if someone is at immediate risk of harm. We'll explain all of this clearly before your first session."
+        }
+      }
+    ]
+  }
+  </script>
 
     <!-- ══════════════════════════════════════════════
          FINAL CTA — centered gradient
