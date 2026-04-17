@@ -1,8 +1,4 @@
 [[redirects]]
-from = "/contact"
-to = "/schedule-a-consultation"
-status = 301
-[[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/contact"
+  to = "/schedule-a-consultation"
+  status = 301

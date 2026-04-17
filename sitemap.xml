@@ -4,149 +4,137 @@
   <!-- Homepage -->
   <url>
     <loc>https://pathlightcounseling.netlify.app/</loc>
-    <lastmod>2026-04-07</lastmod>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Core pages -->
   <url>
-    <loc>https://pathlightcounseling.netlify.app/about.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/about</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/schedule-a-consultation.html</loc>
-    <lastmod>2026-04-08</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/schedule-a-consultation</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/staff.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/staff</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Core service pages -->
   <url>
-    <loc>https://pathlightcounseling.netlify.app/individual-counseling-woodstock.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/individual-counseling-woodstock</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/iop-addiction-treatment-woodstock.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/iop-addiction-treatment-woodstock</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/teen-iop-woodstock.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/teen-iop-woodstock</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/veterans-mental-health-woodstock.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/veterans-mental-health-woodstock</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- SEO service pages — Woodstock -->
   <url>
-    <loc>https://pathlightcounseling.netlify.app/anxiety-therapy-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/anxiety-therapy-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/depression-therapy-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/depression-therapy-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/trauma-therapy-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/trauma-therapy-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/marriage-counseling-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/marriage-counseling-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/therapy-for-women-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/therapy-for-women-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/christian-counseling-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/christian-counseling-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/emdr-therapy-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/emdr-therapy-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/teen-therapy-woodstock-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/teen-therapy-woodstock-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- SEO service pages — Canton -->
   <url>
-    <loc>https://pathlightcounseling.netlify.app/anxiety-therapy-canton-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/anxiety-therapy-canton-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/marriage-counseling-canton-ga.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/marriage-counseling-canton-ga</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Therapist bio pages -->
   <url>
-    <loc>https://pathlightcounseling.netlify.app/britt-parramore-lpc.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/britt-parramore-lpc</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/judy-relf-cadc.html</loc>
-    <lastmod>2026-04-07</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/judy-relf-cadc</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://pathlightcounseling.netlify.app/adam-miller-cps.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pathlightcounseling.netlify.app/dr-michael-carpenter-emdr.html</loc>
-    <lastmod>2026-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pathlightcounseling.netlify.app/stone-ramsey-lamft.html</loc>
-    <lastmod>2026-04-11</lastmod>
+    <loc>https://pathlightcounseling.netlify.app/adam-miller-cps</loc>
+    <lastmod>2026-04-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
