@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:pathlightga.org)",
+      "Bash(open \"/Users/stoneramsey/Pathlight Counseling/index.html\")",
+      "Bash(grep -l \"Montserrat\" \"/Users/stoneramsey/Pathlight Counseling\"/*.html)",
+      "Bash(ls \"/Users/stoneramsey/Pathlight Counseling/\"*.png)",
+      "Bash(git config --global credential.helper)",
+      "Bash(security find-internet-password -s github.com)",
+      "Bash(grep -h 'style\\\\.css\\\\|main\\\\.js' *.html)",
+      "Bash(cp css/style.css style.css)",
+      "Bash(cp js/main.js main.js)",
+      "Bash(lsof -i :8080)",
+      "Read(//Users/stoneramsey/**)"
+    ],
+    "additionalDirectories": [
+      "/Users/stoneramsey"
+    ]
+  }
+}
