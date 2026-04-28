@@ -1,49 +1,59 @@
 /* ============================================================
-   PATHLIGHT COUNSELING — Shared Animation System
+   PATHLIGHT COUNSELING — Animation System
    ============================================================ */
 (function () {
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function () {
 
-    /* ── Page load sequence ─────────────────────────────────
-       Nav fades down, h1 up, subhead 0.3s later, CTA 0.5s later.
-       All opacity 0→1, duration 0.9s, ease-out. No drama.
+    /* ── 1. Page load sequence ──────────────────────────────
+       Add body.loaded after 100ms. CSS handles the transitions:
+       nav 0.7s, h1 0.9s delay 0.2s, sub delay 0.4s, cta 0.6s
     ──────────────────────────────────────────────────────── */
-    var header = document.querySelector('.site-header');
-    if (header) header.classList.add('anim-nav');
+    setTimeout(function () {
+      document.body.classList.add('loaded');
+    }, 100);
 
-    var h1 = document.querySelector('main h1, #main-content h1, .specialty-hero h1');
-    if (h1) h1.classList.add('anim-h1');
+    // Tag the first h1 in main content
+    var h1 = document.querySelector(
+      'main h1, #main-content h1, .specialty-hero h1, [role="main"] h1'
+    );
+    if (h1) h1.classList.add('page-load-h1');
 
-    // Subhead: first meaningful p after h1, or known subhead classes
+    // Tag the subhead — first p that follows h1, or known subhead classes
     var sub = (
       document.querySelector('.hero-sub') ||
       document.querySelector('.specialty-hero p') ||
-      (h1 && (h1.nextElementSibling && h1.nextElementSibling.matches('p')
-        ? h1.nextElementSibling : null))
+      (h1 && h1.nextElementSibling && h1.nextElementSibling.tagName === 'P'
+        ? h1.nextElementSibling
+        : null)
     );
-    if (sub) sub.classList.add('anim-sub');
+    if (sub) sub.classList.add('page-load-sub');
 
-    // CTA: first btn in hero area
+    // Tag the first CTA button in the hero or main area
     var cta = (
       document.querySelector('.hero-cta-group a') ||
-      document.querySelector('.specialty-hero .btn') ||
-      document.querySelector('.hero .btn')
+      document.querySelector('.specialty-hero a.btn') ||
+      document.querySelector('main .btn-primary')
     );
-    if (cta) cta.classList.add('anim-cta');
+    if (cta) cta.classList.add('page-load-cta');
 
-    /* ── Scroll reveal ──────────────────────────────────────
+
+    /* ── 2. Scroll reveals ──────────────────────────────────
        IntersectionObserver at threshold 0.1.
-       opacity 0→1, translateY(16px)→0, 0.9s ease-out.
-       One-way: once visible, stays visible. No reversing.
+       Adds .vis to elements with .rv when they enter viewport.
+       One-way: once visible, stays visible.
     ──────────────────────────────────────────────────────── */
-    var revealSelectors = [
-      'h2', 'h3',
+    var revealTargets = [
+      'main h2',
+      'main h3',
       'main p',
-      '.card', '.service-card', '.service-item',
+      '.card',
+      '.service-card',
+      '.service-item',
       '.faq-item',
-      '.staff-card', '.team-member',
+      '.staff-card',
+      '.team-member',
       '.why-item',
       '.symptom-item',
       '.testimonial-card',
@@ -52,52 +62,65 @@
       '.stat-item',
       'section > .container > *',
       '.section-inner > *'
-    ].join(', ');
+    ];
 
-    var alreadyAnimated = ['.anim-h1', '.anim-sub', '.anim-cta', '.anim-nav'];
+    var nav = document.querySelector('.site-header');
 
-    document.querySelectorAll(revealSelectors).forEach(function (el) {
-      // Skip elements already handling their own load animation
-      var skip = alreadyAnimated.some(function (cls) {
-        return el.classList.contains(cls.replace('.', ''));
-      });
-      // Skip elements inside the nav
-      if (!skip && !header.contains(el)) {
-        el.classList.add('reveal');
+    document.querySelectorAll(revealTargets.join(', ')).forEach(function (el) {
+      // Skip the h1, subhead, and cta already handled by load sequence
+      var isLoadEl = (
+        el.classList.contains('page-load-h1') ||
+        el.classList.contains('page-load-sub') ||
+        el.classList.contains('page-load-cta')
+      );
+      // Skip anything inside the nav
+      var inNav = nav && nav.contains(el);
+
+      if (!isLoadEl && !inNav) {
+        el.classList.add('rv');
       }
     });
 
-    // Mark grid/list parents so children stagger
-    var groupSelectors = [
-      '.services-grid', '.staff-grid', '.why-list',
-      '.testimonials-grid', '.symptom-list', '.stats-bar-inner',
-      '.footer-grid', '.values-grid', '.programs-grid'
-    ].join(', ');
-
-    document.querySelectorAll(groupSelectors).forEach(function (g) {
-      g.classList.add('reveal-group');
-    });
-
-    // Observe all reveal elements
     if ('IntersectionObserver' in window) {
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target); // stays visible — no reversal
+            entry.target.classList.add('vis');
+            observer.unobserve(entry.target); // one-way: stays visible
           }
         });
       }, { threshold: 0.1 });
 
-      document.querySelectorAll('.reveal').forEach(function (el) {
+      document.querySelectorAll('.rv').forEach(function (el) {
         observer.observe(el);
       });
     } else {
-      // Fallback for old browsers: show everything immediately
-      document.querySelectorAll('.reveal').forEach(function (el) {
-        el.classList.add('visible');
+      // Fallback: show everything immediately
+      document.querySelectorAll('.rv').forEach(function (el) {
+        el.classList.add('vis');
       });
     }
+
+
+    /* ── 3. Sticky nav ──────────────────────────────────────
+       Add .scrolled to nav and header after 60px scroll.
+       CSS handles the visual transition (0.4s ease).
+    ──────────────────────────────────────────────────────── */
+    var navEl = document.querySelector('nav') || document.querySelector('.nav-menu');
+    var headerEl = document.querySelector('.site-header');
+    var ticking = false;
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        requestAnimationFrame(function () {
+          var scrolled = window.pageYOffset > 60;
+          if (navEl) navEl.classList.toggle('scrolled', scrolled);
+          if (headerEl) headerEl.classList.toggle('scrolled', scrolled);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
 
   });
 

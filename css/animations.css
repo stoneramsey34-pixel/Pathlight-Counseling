@@ -1,113 +1,113 @@
 /* ============================================================
-   PATHLIGHT COUNSELING — Shared Animation System
-   Calm, gentle, reassuring — designed for anxious visitors
+   PATHLIGHT COUNSELING — Animation System
+   Calm, gentle, safe — designed for people seeking therapy
    ============================================================ */
 
-/* ── Reduced motion: respect user preference ──────────────── */
+/* ── Respect reduced motion preference ───────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }
 
-/* ── Page load keyframes ──────────────────────────────────── */
-@keyframes plFadeDown {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-@keyframes plFadeUp {
-  from { opacity: 0; transform: translateY(16px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* Nav fades down softly */
-.anim-nav {
+/* ── Page load — nav ─────────────────────────────────────── */
+.site-header {
   opacity: 0;
-  animation: plFadeDown 0.9s ease-out forwards;
-  animation-delay: 0s;
+  transform: translateY(-8px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out,
+              background 0.4s ease, border-color 0.4s ease,
+              box-shadow 0.4s ease;
 }
-
-/* H1 fades up from 16px below */
-.anim-h1 {
-  opacity: 0;
-  animation: plFadeUp 0.9s ease-out forwards;
-  animation-delay: 0.15s;
-}
-
-/* Subhead follows 0.3s after h1 */
-.anim-sub {
-  opacity: 0;
-  animation: plFadeUp 0.9s ease-out forwards;
-  animation-delay: 0.45s;
-}
-
-/* CTA button follows 0.5s after h1 */
-.anim-cta {
-  opacity: 0;
-  animation: plFadeUp 0.9s ease-out forwards;
-  animation-delay: 0.65s;
-}
-
-/* ── Scroll reveal — one-way, stays visible ───────────────── */
-.reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
-}
-.reveal.visible {
+body.loaded .site-header {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Stagger sibling children inside reveal groups */
-.reveal-group > .reveal:nth-child(1)  { transition-delay: 0.00s; }
-.reveal-group > .reveal:nth-child(2)  { transition-delay: 0.10s; }
-.reveal-group > .reveal:nth-child(3)  { transition-delay: 0.20s; }
-.reveal-group > .reveal:nth-child(4)  { transition-delay: 0.30s; }
-.reveal-group > .reveal:nth-child(5)  { transition-delay: 0.40s; }
-.reveal-group > .reveal:nth-child(6)  { transition-delay: 0.50s; }
-.reveal-group > .reveal:nth-child(7)  { transition-delay: 0.60s; }
-.reveal-group > .reveal:nth-child(8)  { transition-delay: 0.70s; }
-
-/* ── Hover states ─────────────────────────────────────────── */
-
-/* All buttons lift 2px with soft shadow */
-.btn,
-.btn-primary,
-.btn-outline-white,
-.btn-white,
-.btn-outline-green,
-.nav-cta-link,
-[class*="btn-"] {
-  transition: transform 0.2s ease, box-shadow 0.2s ease,
-              background-color 0.2s ease, border-color 0.2s ease,
-              color 0.2s ease !important;
+/* ── Page load — hero h1 ─────────────────────────────────── */
+.page-load-h1 {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease-out 0.2s, transform 0.9s ease-out 0.2s;
 }
+body.loaded .page-load-h1 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Page load — subhead ─────────────────────────────────── */
+.page-load-sub {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease-out 0.4s, transform 0.9s ease-out 0.4s;
+}
+body.loaded .page-load-sub {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Page load — first CTA ───────────────────────────────── */
+.page-load-cta {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease-out 0.6s, transform 0.9s ease-out 0.6s;
+}
+body.loaded .page-load-cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Scroll reveal ───────────────────────────────────────── */
+.rv {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+.rv.vis {
+  opacity: 1;
+  transform: none;
+}
+
+/* ── Stagger delays ──────────────────────────────────────── */
+.d1 { transition-delay: 0.1s; }
+.d2 { transition-delay: 0.2s; }
+.d3 { transition-delay: 0.3s; }
+.d4 { transition-delay: 0.4s; }
+.d5 { transition-delay: 0.5s; }
+
+/* ── Sticky nav ──────────────────────────────────────────── */
+nav.scrolled,
+.site-header.scrolled {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+}
+
+/* ── Link and button transitions ─────────────────────────── */
+a {
+  transition: color 0.2s ease;
+}
+button {
+  transition: background-color 0.2s ease, color 0.2s ease,
+              border-color 0.2s ease;
+}
+
+/* ── CTA button hover lift ───────────────────────────────── */
 .btn:hover,
 .btn-primary:hover,
 .btn-outline-white:hover,
 .btn-white:hover,
 .btn-outline-green:hover,
-[class*="btn-"]:hover {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 6px 20px rgba(59, 83, 69, 0.15) !important;
+.nav-cta-link:hover,
+a[href*="schedule"]:hover,
+a[href*="consult"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
 }
 .btn:active,
-[class*="btn-"]:active {
-  transform: translateY(0) !important;
-  box-shadow: none !important;
-}
-
-/* All links transition color */
-a {
-  transition: color 0.2s ease;
-}
-
-/* ── Sticky nav — smooth background transition ────────────── */
-.site-header {
-  transition: background 0.4s ease,
-              border-color 0.4s ease,
-              box-shadow 0.4s ease !important;
+.btn-primary:active,
+[class*="btn"]:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
