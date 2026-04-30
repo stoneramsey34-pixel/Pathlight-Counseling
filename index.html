@@ -26,13 +26,15 @@
   <style>
     /* ── Homepage-specific overrides ───────────────── */
 
-    /* Hero: centered layout, brand color background */
+    /* Hero: centered layout, layered background */
     .hero {
       text-align: center;
-      padding: 120px 24px 148px;
-      background: linear-gradient(135deg, #3B5345 0%, #2a3d32 100%);
+      padding: 120px 24px 72px;
+      background:
+        linear-gradient(135deg, rgba(59,83,69,0.89) 0%, rgba(42,61,50,0.93) 100%),
+        url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1600&q=80') center / cover no-repeat;
     }
-    @media (min-width: 768px) { .hero { padding: 152px 24px 180px; } }
+    @media (min-width: 768px) { .hero { padding: 152px 24px 96px; } }
 
     .hero-logo {
       width: 230px;
@@ -142,7 +144,7 @@
          ══════════════════════════════════════════════ -->
     <section class="hero" aria-label="Hero">
 
-      <h1>Addiction &amp; Recovery Therapy<br>in Woodstock, GA</h1>
+      <h1>Addiction &amp; Recovery<br>Therapy in Woodstock, GA</h1>
 
       <p class="hero-sub">
         You've tried to stop on your own. Every time things slipped back, the shame got a little heavier. That doesn't mean you can't do this, it means you haven't had the right support yet. We're here.
@@ -207,7 +209,7 @@
         <span class="section-label">How we can help</span>
         <div class="divider"></div>
         <h2 class="section-title" style="max-width:500px; margin:0 auto 12px;">Programs built around your life</h2>
-        <p class="section-intro">Different levels of support depending on where you are. You don't have to commit to everything at once.</p>
+        <p class="section-intro" style="text-align:center;">Different levels of support depending on where you are. You don't have to commit to everything at once.</p>
 
         <div class="services-grid">
           <div class="service-card">
